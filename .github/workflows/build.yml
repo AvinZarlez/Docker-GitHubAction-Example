@@ -18,12 +18,12 @@ jobs:
             id: meta
             uses: docker/metadata-action@v5
             with:
-                images: ${{ vars.DOCKERHUB_USERNAME }}/my-image
+                images: ${{ vars.DOCKER_USERNAME }}/my-image
 
           - name: Login to DockerHub
             uses: docker/login-action@v3
             with:
-              username: ${{ vars.DOCKERHUB_USERNAME }}
+              username: ${{ vars.DOCKER_USERNAME }}
               password: ${{ secrets.DOCKER_PASSWORD }}
 
 
