@@ -3,7 +3,7 @@ This repository demonstrates how to use GitHub Actions workflows to build a mult
 
 ## Dockerfile ([`Dockerfile`](./Dockerfile))
 
-1. `FROM --platform=${BUILDPLATFORM} ubuntu:24.04`: Specifies the base image to use for the Docker image. The `--platform=${BUILDPLATFORM}` directive allows the image to be built for different architectures.
+1. `FROM --platform=${TARGETPLATFORM} ubuntu:24.04`: Specifies the base image to use for the Docker image. The `--platform=${TARGETPLATFORM}` directive confirms that the image will be built for the target architecture.
 2. `CMD ["echo", "Hello World!"]`: Defines the command to run when the container starts. In this case, it will print "Hello World!" to the console.
 
 ## GitHub Actions Workflow ([`build.yml`](.github/workflows/build.yml))
